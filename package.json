@@ -1,0 +1,42 @@
+{
+  "name": "waitee",
+  "version": "0.1.0",
+  "description": "Small library to manage moments when you need to wait something to happen. So you don't need to write wait-events by yourself.",
+  "scripts": {
+    "build": "ncc build src/index.ts -o build",
+    "test": "jest"
+  },
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build"
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "fast-clone": "^1.5.13",
+    "fast-equals": "^2.0.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.5",
+    "@types/node": "^14.0.23",
+    "jest": "^26.1.0",
+    "ts-jest": "^26.1.3",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shift46/waitee.git"
+  },
+  "keywords": [
+    "wait",
+    "until",
+    "attempts",
+    "condition"
+  ],
+  "author": "Maltsev Kirill <kirillmaltsev@inbox.ru>",
+  "bugs": {
+    "url": "https://github.com/Shift46/waitee/issues"
+  },
+  "homepage": "https://github.com/Shift46/waitee#readme"
+}

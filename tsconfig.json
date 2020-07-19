@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "removeComments": true,
+    "moduleResolution": "node",
+    "preserveConstEnums": true,
+    "noUnusedLocals": true,
+    "sourceMap": false,
+    "outDir": "./build",
+    "baseUrl": "src",
+    "declaration": true,
+    "declarationMap": true
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
