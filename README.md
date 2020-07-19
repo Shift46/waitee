@@ -12,14 +12,18 @@ or
 
 #### Options
 
-```
-for - how long to wait for some event to happen in ms. Zero means to wait for unlimited time. (default Infinity)
-attempts - how many attempts to do before throwing the error. Zero means unlimited attempts. (default Infinity)
-interval - how often to check the event in ms. (default 100 ms.)
-a - variable 'a', see examples (default null)
-b - variable 'b', see examples (default null)
-noerror - when time passed in 'for' option was over or all attempts were done, doesn't throw the error. Instead it will return ```false``` when wait-function finishes without success condition. (default false)
-```
+
+```for``` - how long to wait for some event to happen in ms. Zero means to wait for unlimited time. (default Infinity)
+
+```attempts``` - how many attempts to do before throwing the error. Zero means unlimited attempts. (default Infinity)
+
+```interval``` - how often to check the event in ms. (default 100 ms.)
+
+```a``` - variable 'a', see examples (default null)
+
+```b``` - variable 'b', see examples (default null)
+
+```noerror``` - when time passed in 'for' option was over or all attempts were done, doesn't throw the error. Instead it will return ```false``` when wait-function finishes without success condition. (default false)
 
 You can pass options using 2 ways:
 
