@@ -232,4 +232,4 @@ You can find more examples in tests folder.
 
 #### TBD
 
- 1. Update README
+ 1. Update README (fix eng. mistakes, add more examples)
