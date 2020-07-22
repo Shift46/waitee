@@ -380,6 +380,7 @@ it('should wait until custom function returns true.', async () => {
     await expect(wait.until(custom_function)).resolves.toBe(true);
 });
 
+
 it('should wait 10 times for 200 ms. and throw the error. Option 1', async () => {
     expect.assertions(1);
 
@@ -388,12 +389,46 @@ it('should wait 10 times for 200 ms. and throw the error. Option 1', async () =>
     await expect(wait.until({ attempts: 10, interval: 200 }).a(() => ++a).gt(11)).rejects.toThrow();
 });
 
+
 it('should wait 10 times for 200 ms. and throw the error. Option 2', async () => {
     expect.assertions(1);
 
     let a = 0;
 
     await expect(wait.until().attempts(10).interval(200).a(() => ++a).gt(11)).rejects.toThrow();
+});
+
+
+it('should wait until array includes element "test2". Option 1', async () => {
+    expect.assertions(1);
+
+    let a = [ 'test1' ];
+
+    setTimeout(() => a.push('test2'), 1000);
+
+    await expect(wait.until().a(a).includes('test2')).resolves.toBe(true);
+});
+
+
+it('should wait until array includes element "test2". Option 2', async () => {
+    expect.assertions(1);
+
+    let a = [ 'test1' ];
+
+    setTimeout(() => a.push('test2'), 1000);
+
+    await expect(wait.until().includes(a, 'test2')).resolves.toBe(true);
+});
+
+
+it('should wait until array includes element "test2" Option 3', async () => {
+    expect.assertions(1);
+
+    let a = [ 'test1' ];
+
+    setTimeout(() => a.push('test2'), 1000);
+
+    await expect(wait.until().a(a).includes().b('test2')).resolves.toBe(true);
 });
 
 

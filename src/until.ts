@@ -255,4 +255,19 @@ export class Until implements UntilInterface {
 
         return this.checker(this.actions.isFalse());
     }
+
+    public includes (a?: Array<any>, b?: any): Promise<boolean> | BInterface {
+        let bRequest: void | Function = this.defineVariables(a, b);
+        const fn: Function = () => this.checker(this.actions.includes());
+
+        if (bRequest) {
+            return bRequest(fn);
+        }
+
+        if (!exists(this.opts.a) || !exists(this.opts.b)) {
+            throw new Error('You need to define variables');
+        }
+
+        return fn();
+    }
 }

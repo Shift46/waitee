@@ -47,6 +47,10 @@ export class Actions {
         return async () => await Until.calculate(this.opts.a) === false;
     }
 
+    public includes (): Function {
+        return async () => (await Until.calculate(this.opts.a)).includes(await Until.calculate(this.opts.b));
+    }
+
     /* Maybe I will add it after a while
     public async raw (text): Promise<Function> {
         const script: any = new vm.Script(text);
